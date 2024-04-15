@@ -7,6 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+telebot = "^0.0.5"
+pillow = "^10.3.0"
+python-barcode = "^0.15.1"
+pyzbar = "^0.1.9"
 
 
 [build-system]
