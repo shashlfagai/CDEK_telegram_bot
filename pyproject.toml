@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "cdek-bot"
+version = "0.1.0"
+description = "This bot using for detecting bar codes in CDEK's form and print it on stickers"
+authors = ["Loginov <itsmeegorloginov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
