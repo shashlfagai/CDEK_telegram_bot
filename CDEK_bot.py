@@ -16,6 +16,7 @@ from barcode import Code128  # Импорт класса для создания
 bot_token = "7101871510:AAHnSRSUQXym5qT3OYnPO4wdRXIvlrGThVc"
 bot = telebot.TeleBot(bot_token)  # Создание экземпляра бота с использованием полученного токена
 
+
 # Обработчик сообщений, реагирующий на получение фото
 @bot.message_handler(content_types=['photo'])
 def handle_image(message):
@@ -41,7 +42,7 @@ def handle_image(message):
             if detected_barcodes:
                 bdata = detected_barcodes[0].data.decode('utf-8')
                 my_code = Code128(bdata, writer=ImageWriter())
-                my_code.save("barcode.png")
+                my_code.save("barcode")
                 with open("barcode.png", 'rb') as barcode_file:
                     bot.send_photo(message.chat.id, barcode_file)  # Отправка изображения с штрих-кодом
                 os.remove("barcode.png")
